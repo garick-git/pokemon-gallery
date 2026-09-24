@@ -4,7 +4,7 @@ A responsive Pokémon gallery built with **Next.js (App Router)**, **TypeScript*
 
 **Live demo:** [LIVE_VERCEL_URL](https://pokemon-gallery.site/)
 
-![Pokémon Gallery screenshot](./public/screenshot.png)
+![Pokémon Gallery screenshot](./public/pokemonImg.png)
 
 ## Features
 
