@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokémon Gallery
 
-## Getting Started
+A responsive Pokémon gallery built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**, powered by the [PokéAPI](https://pokeapi.co/).
 
-First, run the development server:
+**Live demo:** [LIVE_VERCEL_URL](https://pokemon-gallery.site/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
+![Pokémon Gallery screenshot](./public/screenshot.png)
+
+## Features
+
+- **Responsive grid:** 1 to 4 columns depending on screen size
+- **Parallel data fetching:** the list endpoint only returns names and URLs, so the app fetches the list first, then loads every Pokémon's details at once with `Promise.all` instead of one at a time
+- **Type safety:** `Pokemon` and `Stat` interfaces modeled on the real API response
+- **Loading, error, and success states:** handled explicitly, so the user always knows what's happening
+- **Color-coded stats:** HP, Attack, Defense, and Speed use familiar gaming color conventions
+- **Accessibility:** descriptive alt text, `aria-live` for loading, `role="alert"` for errors, and `aria-expanded` on the collapsible summary panel
+
+## Tech Stack
+
+| Layer | Tools |
+| --- | --- |
+| Framework | Next.js (App Router), React |
+| Language | TypeScript |
+| Styling | Tailwind CSS, `next/font` (Fredoka) |
+| Data | PokéAPI (REST) |
+| Deployment | Vercel |
+
+## Project Structure
+
+```
+app/
+  layout.tsx              Root layout and font setup
+  page.tsx                Data fetching, loading/error states, results grid
+components/
+  PokemonCard.tsx         Reusable card: sprite, name, ID, color-coded stats
+  AssignmentSummary.tsx   Collapsible panel explaining build decisions
+types.ts                  Pokemon and Stat interfaces
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/garick-git/pokemon-gallery.git
+cd pokemon-gallery
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Then open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Garick Mendez**: [garickm.com](https://www.garickm.com) · [LinkedIn](https://www.linkedin.com/in/garick-mendez) · [GitHub](https://github.com/garick-git)
