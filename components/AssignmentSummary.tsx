@@ -31,7 +31,7 @@ const summaryData = [
   {
     title: 'Accessibility',
     content:
-      'I added meaningul alt text on each Pokémon image, roles, aria-live, aria-expanded, and aria-labels for screen readers',
+      'I added meaningful alt text on each Pokémon image, roles, aria-live, aria-expanded, and aria-labels for screen readers',
   },
 ];
 

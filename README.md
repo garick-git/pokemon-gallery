@@ -2,9 +2,13 @@
 
 A responsive Pokémon gallery built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**, powered by the [PokéAPI](https://pokeapi.co/).
 
-**Live demo:** [LIVE_VERCEL_URL](https://pokemon-gallery.site/)
+**Live demo:** [pokemon-gallery.site](https://pokemon-gallery.site/)
 
 ![Pokémon Gallery screenshot](./public/pokemonImg.png)
+
+## About
+
+This started as a take-home coding exercise, which I extended and deployed. I designed the cards and layout in Figma first, then built every component and page myself. The "Assignment Summary" panel at the top of the page explains the main build decisions.
 
 ## Features
 
@@ -19,6 +23,7 @@ A responsive Pokémon gallery built with **Next.js (App Router)**, **TypeScript*
 
 | Layer | Tools |
 | --- | --- |
+| Design | Figma |
 | Framework | Next.js (App Router), React |
 | Language | TypeScript |
 | Styling | Tailwind CSS, `next/font` (Fredoka) |
